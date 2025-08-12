@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# deps
 /node_modules
 
 # next.js
@@ -10,7 +8,7 @@
 # production
 /build
 
-# debug
+# debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -18,6 +16,7 @@ yarn-error.log*
 
 # env files
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -26,13 +25,22 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Google/Service account creds
-vision-key.json
+# Google / service account credentials (DO NOT COMMIT)
+/vision-key.json
 *.service-account.json
 *.gcp.json
 *.key.json
 *.pem
+*.p12
+*.json.enc
 
-# service account keys
-vision-key.json
-*.key.json
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# caches
+.turbo/
+.swc/
+.eslintcache
